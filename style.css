@@ -1,0 +1,65 @@
+@import "reset.css";
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    padding: 5px;
+}
+.box{
+    color: white;
+    font-size: 6rem;
+    text-align: center;
+    text-shadow: 4px 4px 0 black;
+    margin: 5px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.blue{
+    background: blue;
+    flex-basis: calc(50% - 10px);
+    height: 20vh;
+
+}
+.orange{
+    background: orange;
+    flex-basis: calc(100% - 5px);
+    height: 35vh;
+}
+.green{
+    background: green;
+    flex-basis: calc(33.33333% - 10px);
+    height: 25vh;
+}
+.red{
+    background: red;
+    flex-basis: calc(25% - 10px);
+    height: 15vh;
+}
+@media all and (max-width: 1000px) {
+    .blue , .green{
+        flex-direction: column;
+        flex-basis: calc(100% - 10px);
+        height: 10vh;
+    }
+    .red{
+        flex-basis: calc(50% - 20px);
+        height: 10vh;
+    }
+    .orange{
+        height: 20vh;
+    }
+}
+@media all and (max-width: 600px) {
+    .red{
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+    .red + .red + .red{
+        display: none;
+    }
+}
+
